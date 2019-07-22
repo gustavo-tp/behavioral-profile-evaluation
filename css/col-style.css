@@ -1,0 +1,23 @@
+.col-min {
+	width: min-content;
+}
+
+.col-ninth-percent {
+	width: 90%;
+}
+
+.col-eighth-part-rel {
+	width: 12.5%;
+}
+
+.col-fourth-part-rel {
+	width: 25%;
+}
+
+.col-third-part-rel {
+	width: 33.33%;
+}
+
+.col-second-part-rel {
+	width: 50%;
+}

@@ -1,0 +1,43 @@
+button.lastQuestion {
+    width: 40vmin;
+    font-size: 5vmin;
+}
+
+.landscape img, #results img {
+	height: unset;
+	width: 80%;
+}
+
+.animalSelected {
+	box-shadow: 5px 5px 12px lightslategrey;
+}
+
+.arrow-button {
+    font-size: 8vmin;
+}
+
+#results {
+	height: 100vh;
+}
+
+.eagleResult, .catResult, .sharkResult, .wolfResult {
+	font-size: 6vmin;
+}
+
+.resultsInfo {
+	font-size: 3.5vmin;
+}
+
+#aboutAnimals span {
+	position: absolute;
+    top: 10vh;
+    left: 50%;
+    transform: translateX(-50%);
+}
+
+.btn-back-to {
+    position: absolute;
+    top: 3vmin;
+    right: 3vmin;
+    width: 15vmin;
+}

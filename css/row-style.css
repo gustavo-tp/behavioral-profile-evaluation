@@ -1,0 +1,119 @@
+.row {
+	width: 100%;
+}
+
+.rol-min {
+	height: min-content;
+}
+
+/* Static (witch viewport height) */
+
+.row-twentieth-part {
+	height: 5vh;
+}
+
+.row-eighteenth-part {
+	height: 5.55vh;
+}
+
+.row-twelfth-part {
+	height: 8.33vh;
+}
+
+.row-eleventh-part {
+	height: 9.09vh;
+}
+
+.row-tenth-part {
+	height: 10vh;
+}
+
+.row-ninth-part {
+	height: 11.11vh;
+}
+
+.row-eighth-part {
+	height: 12.5vh;
+}
+
+.row-seventh-part {
+	height: 14.28vh;
+}
+
+.row-sixth-part {
+	height: 16.66vh;
+}
+
+.row-fifth-part {
+	height: 20vh;
+}
+
+.row-fourth-part {
+	height: 25vh;
+}
+
+.row-third-part {
+	height: 33.33vh;
+}
+
+.row-second-part {
+	height: 50vh;
+}
+
+.row-first-part {
+	height: 100vh;
+}
+
+/* Relative (witch percentage) */
+
+.row-twentieth-part-rel {
+	height: 5%;
+}
+
+.row-eighteenth-part-rel {
+	height: 5.55%;
+}
+
+.row-twelfth-part-rel {
+	height: 8.33%;
+}
+
+.row-eleventh-part-rel {
+	height: 9.09%;
+}
+
+.row-tenth-part-rel {
+	height: 10%;
+}
+
+.row-ninth-part-rel {
+	height: 11.11%;
+}
+
+.row-eighth-part-rel {
+	height: 12.5%;
+}
+
+.row-seventh-part-rel {
+	height: 14.28%;
+}
+
+.row-sixth-part-rel {
+	height: 16.66%;
+}
+
+.row-fifth-part-rel {
+	height: 20%;
+}
+
+.row-fourth-part-rel {
+	height: 25%;
+}
+
+.row-third-part-rel {
+	height: 33.33%;
+}
+
+.row-second-part-rel {
+	height: 50%;
+}

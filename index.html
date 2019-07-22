@@ -1,0 +1,192 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<meta charset="utf-8">
+	<title>Avaliação de Perfil Comportamental</title>
+	<link rel="stylesheet" type="text/css" href="./css/generic-style.css">
+	<link rel="stylesheet" type="text/css" href="./css/hn-style.css">
+	<link rel="stylesheet" type="text/css" href="./css/button-style.css">
+	<link rel="stylesheet" type="text/css" href="./css/text-style.css">
+	<link rel="stylesheet" type="text/css" href="./css/display-style.css">
+	<link rel="stylesheet" type="text/css" href="./css/positioning-style.css">
+	<link rel="stylesheet" type="text/css" href="./css/row-style.css">
+	<link rel="stylesheet" type="text/css" href="./css/col-style.css">
+	<link rel="stylesheet" type="text/css" href="./css/style.css">
+</head>
+<body>
+	<div id="menu" class="row">
+		<div class="row-sixth-part">
+			<div class="vertical-center-position">
+				<h1 class="text-center text-blue">Avaliação de Perfil Comportamental</h1>
+			</div>
+		</div>
+
+		<div class="row-twelfth-part">
+			<div class="vertical-center-position">
+				<h2 class="text-center text-metal">Selecione seu animal preferido dentre os listados abaixo:</h2>
+			</div>
+		</div>
+
+		<div class="row text-center">
+			<div class="row-second-part flex portrait">
+				<div class="col-second-part-rel">
+					<div class="row row-second-part-rel">
+						<img src="./img/eagle.svg" alt="Águia" onclick="setFavoriteAnimal('eagle');">
+						<div class="row"><span class="text-ice">Águia</span></div>
+					</div>
+					<div class="row row-second-part-rel">
+						<img src="./img/cat.svg" alt="Gato" onclick="setFavoriteAnimal('cat');">
+						<div class="row"><span class="text-ice">Gato</span></div>
+					</div>
+				</div>
+				<div class="col-second-part-rel">
+					<div class="row row-second-part-rel">
+						<img src="./img/shark.svg" alt="Tubarão" onclick="setFavoriteAnimal('shark');">
+						<div class="row"><span class="text-ice">Tubarão</span></div>
+					</div>
+					<div class="row row-second-part-rel">
+						<img src="./img/wolf.svg" alt="Lobo" onclick="setFavoriteAnimal('wolf');">
+						<div class="row"><span class="text-ice">Lobo</span></div>
+					</div>
+				</div>
+			</div>			
+			<div class="row-second-part flex landscape">
+				<div class="col-fourth-part-rel rol-min vertical-center-position">
+					<img src="./img/eagle.svg" alt="Águia" onclick="setFavoriteAnimal('eagle');">
+					<div class="row"><span class="text-ice">Águia</span></div>
+				</div>
+				<div class="col-fourth-part-rel rol-min vertical-center-position">
+					<img src="./img/cat.svg" alt="Gato" onclick="setFavoriteAnimal('cat');">
+					<div class="row"><span class="text-ice">Gato</span></div>
+				</div>
+				<div class="col-fourth-part-rel rol-min vertical-center-position">
+					<img src="./img/shark.svg" alt="Tubarão" onclick="setFavoriteAnimal('shark');">
+					<div class="row"><span class="text-ice">Tubarão</span></div>
+				</div>
+				<div class="col-fourth-part-rel rol-min vertical-center-position">
+					<img src="./img/wolf.svg" alt="Lobo" onclick="setFavoriteAnimal('wolf');">
+					<div class="row"><span class="text-ice">Lobo</span></div>
+				</div>
+			</div>
+		</div>
+
+		<div class="row row-twelfth-part">
+			<div class="vertical-center-position">
+				<h3 class="text-center text-ice">Em cada uma das 25 questões a seguir, escolha uma alternativa (I, C, O ou A).</h3>
+			</div>
+		</div>
+
+		<div class="row row-sixth-part">
+			<div class="col-min horizontal-center vertical-center-position">
+				<button class="btn btn-blue" onclick="startQuiz();">Começar</button>
+			</div>			
+		</div>
+	</div>
+
+	<div id="questions" class="row hidden">
+		<div id="questionsContent" class="row"></div>
+		<div id="navigationArrows" class="row row-sixth-part flex">
+			<div class="col-second-part-rel">
+				<div class="col-min horizontal-center vertical-center-position">
+					<button id="leftArrow" class="btn btn-short btn-blue arrow-button disabled" onclick="previousQuestion();"><</button>
+				</div>
+			</div>
+			<div class="col-second-part-rel">
+				<div class="col-min horizontal-center vertical-center-position">
+					<button id="rightArrow" class="btn btn-short btn-blue arrow-button disabled" onclick="nextQuestion();">></button>
+				</div>
+			</div>
+		</div>
+	</div>
+
+	<div id="results" class="row hidden">
+		<button class="btn btn-blue btn-back-to" onclick="backToMainMenu();">X</button>
+		<table class="col-ninth-percent horizontal-center text-center">
+			<thead>
+				<tr class="row-eighth-part portrait">
+					<th colspan="3" class="text-blue">RESULTADOS:</th>
+				</tr>
+				<tr class="row-twentieth-part portrait">
+					<th colspan="3" class="text-danger resultsInfo">Clique em um animal para visualizar mais informações:</th>
+				</tr>
+				<tr class="row-fifth-part landscape">
+					<th colspan="6" class="text-blue">RESULTADOS:</th>
+				</tr>
+				<tr class="row-eighth-part landscape">
+					<th colspan="6" class="text-danger resultsInfo">Clique em um animal para visualizar mais informações:</th>
+				</tr>
+			</thead>
+			<tbody>
+				<tr class="row-fifth-part portrait">
+					<th class="col-third-part-rel text-blue">I</th>
+					<td class="col-third-part-rel text-metal"><span class="eagleResult"></span>%</td>
+					<td class="col-third-part-rel">
+						<img src="./img/eagle.svg" alt="Águia" onclick="viewAbout('eagle');">
+						<span class="text-ice">Águia</span></div>
+					</td>
+				</tr>
+				<tr class="row-fifth-part portrait">
+					<th class="col-third-part-rel text-blue">C</th>
+					<td class="col-third-part-rel text-metal"><span class="catResult"></span>%</td>
+					<td class="col-third-part-rel">
+						<img src="./img/cat.svg" alt="Gato" onclick="viewAbout('cat');">
+						<span class="text-ice">Gato</span></div>
+					</td>
+				</tr>
+				<tr class="row-fifth-part portrait">
+					<th class="col-third-part-rel text-blue">A</th>
+					<td class="col-third-part-rel text-metal"><span class="sharkResult"></span>%</td>
+					<td class="col-third-part-rel">
+						<img src="./img/shark.svg" alt="Tubarão" onclick="viewAbout('shark');">
+						<span class="text-ice">Tubarão</span></div>
+					</td>
+				</tr>
+				<tr class="row-fifth-part portrait">
+					<th class="col-third-part-rel text-blue">O</th>
+					<td class="col-third-part-rel text-metal"><span class="wolfResult"></span>%</td>
+					<td class="col-third-part-rel">
+						<img src="./img/wolf.svg" alt="Lobo" onclick="viewAbout('wolf');">
+						<span class="text-ice">Lobo</span></div>
+					</td>
+				</tr>
+
+				<tr class="row-fourth-part landscape">
+					<th class="col-eighth-part-rel text-blue">I</th>
+					<td class="col-eighth-part-rel text-metal"><span class="eagleResult"></span>%</td>
+					<td class="col-eighth-part-rel">
+						<img src="./img/eagle.svg" alt="Águia" onclick="viewAbout('eagle');">
+						<span class="text-ice">Águia</span></div>
+					</td>
+					<th class="col-eighth-part-rel text-blue">C</th>
+					<td class="col-eighth-part-rel text-metal"><span class="catResult"></span>%</td>
+					<td class="col-eighth-part-rel">
+						<img src="./img/cat.svg" alt="Gato" onclick="viewAbout('cat');">
+						<span class="text-ice">Gato</span></div>
+					</td>
+				</tr>
+				<tr class="row-fourth-part landscape">
+					<th class="col-eighth-part-rel text-blue">A</th>
+					<td class="col-eighth-part-rel text-metal"><span class="sharkResult"></span>%</td>
+					<td class="col-eighth-part-rel">
+						<img src="./img/shark.svg" alt="Tubarão" onclick="viewAbout('shark');">
+						<span class="text-ice">Tubarão</span></div>
+					</td>
+					<th class="col-eighth-part-rel text-blue">O</th>
+					<td class="col-eighth-part-rel text-metal"><span class="wolfResult"></span>%</td>
+					<td class="col-eighth-part-rel">
+						<img src="./img/wolf.svg" alt="Lobo" onclick="viewAbout('wolf');">
+						<span class="text-ice">Lobo</span></div>
+					</td>
+				</tr>
+			</tbody>
+		</table>
+	</div>
+
+	<div id="aboutAnimals" class="row text-center hidden"></div>
+
+	<script type="text/javascript" src="./js/questions.js"></script>
+	<script type="text/javascript" src="./js/animals-attributes.js"></script>
+	<script type="text/javascript" src="./js/variables.js"></script>
+	<script type="text/javascript" src="./js/script.js"></script>
+</body>
+</html>

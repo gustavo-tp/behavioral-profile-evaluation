@@ -1,0 +1,23 @@
+.text-blue {
+	color: deepskyblue;
+    text-shadow: 5px 5px 8px midnightblue;
+}
+
+.text-ice {
+	color: aliceblue;
+    text-shadow: 5px 5px 8px steelblue;
+}
+
+.text-metal {
+    color: lightgray;
+    text-shadow: 5px 5px 8px dimgrey;
+}
+
+.text-danger {
+    color: palevioletred;
+    text-shadow: 5px 5px 8px indianred;
+}
+
+.text-center {
+	text-align: center;
+}
